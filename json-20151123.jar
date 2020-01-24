@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="0; url=https://jfrog.com/jcenter-http/">
+        <script type="text/javascript">
+            window.location.href = "https://jfrog.com/jcenter-http/"
+        </script>
+        <title>HTTP not supported</title>
+    </head>
+    <body>
+        JCenter only supports HTTPS requests for both the user interface and the APIs, read more <a href='https://jfrog.com/jcenter-http/'>here</a>.
+    </body>
+</html>
