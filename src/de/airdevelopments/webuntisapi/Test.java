@@ -4,14 +4,14 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		ApplicableWebUntisConnection connection = new ApplicableWebUntisConnection("school-sch", "poly", "username", "******");
+		ApplicableWebUntisConnection connection = new ApplicableWebUntisConnection("schiller-gym", "neilo", "user", "pwd");
 		
 		try
 		{
 			if(connection.login())
 				System.out.println("Login Successful");
 
-			connection.getSubstitutions("20180212", "20181230");
+			connection.getSubstitutions("20190101", "20191230");
 			
 			connection.logout();
 		}catch(WebUntisConnectionErrorException e)
