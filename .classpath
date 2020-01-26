@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="json-20151123.jar"/>
-	<classpathentry kind="lib" path="WebUntisAPI-1.1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/marek/git/WebUntisAPI-Java/WebUntisAPI-1.1.2.jar.zip"/>
+	<classpathentry kind="lib" path="/Users/marek/git/WebUntisAPI-Java/json-20190722.jar.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
