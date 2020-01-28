@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		ApplicableWebUntisConnection connection = new ApplicableWebUntisConnection("schiller-gym", "neilo", "cze", "password");
+		ApplicableWebUntisConnection connection = new ApplicableWebUntisConnection("schiller-gym", "neilo", "user", "password");
 		
 		try
 		{
