@@ -1,5 +1,7 @@
 package de.airdevelopments.webuntisapi;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
@@ -24,8 +26,11 @@ import de.airdevelopments.webuntisapi.resultobjects.TimeUnit;
  * @author MikisW
  *
  */
+
+
 public class ApplicableWebUntisConnection extends WebUntisConnection{
 
+	private static FileWriter file;
 	/**
 	 * Implements many of the available methods of the Untis documentation already and may be used as template or quick start.
 	 * <br><br>
@@ -264,8 +269,31 @@ public class ApplicableWebUntisConnection extends WebUntisConnection{
 	 */
 	public ArrayList<Substitution> getSubstitutions(String startDate, String endDate)
 	{
+		
+		
 		String requestID = Utils.getRandomId(); //generate random id for the request
 		String result = getConnection().executeRequest("{\"id\":\""+requestID+"\",\"method\":\"getSubstitutions\",\"params\":{\"startDate\":"+startDate+",\"endDate\":"+endDate+",\"departmentId\":0},\"jsonrpc\":\"2.0\"}");
+		
+		try {
+			file = new FileWriter("/Users/marekczernohous/Documents/crunchify.txt");
+		
+			file.write(result);
+		
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} finally {
+		 
+         try {
+             file.flush();
+             file.close();
+         } catch (IOException e) {
+             // TODO Auto-generated catch block
+             e.printStackTrace();
+         }
+     }
+		
+		
 		
 		System.out.println(result);
 		

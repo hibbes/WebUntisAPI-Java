@@ -1,17 +1,22 @@
 package de.airdevelopments.webuntisapi;
 
+
+import java.io.IOException;
+
 public class Test {
 
-	public static void main(String[] args) {
+	
+	
+	public static void main(String[] args) throws IOException {
 		
-		ApplicableWebUntisConnection connection = new ApplicableWebUntisConnection("schiller-gym", "neilo", "user", "password");
+		ApplicableWebUntisConnection connection = new ApplicableWebUntisConnection("schiller-gym", "neilo", "cze", "b28ajt*");
 		
 		try
 		{
 			if(connection.login())
 				System.out.println("Login Successful");
 
-			connection.getSubstitutions("20190101", "20191230");
+			connection.getSubstitutions("20200116", "20200117");
 			
 			connection.logout();
 		}catch(WebUntisConnectionErrorException e)
@@ -19,6 +24,7 @@ public class Test {
 			e.printStackTrace();
 			System.out.println(e.getError());
 		}
+		
 	}
 
 }
